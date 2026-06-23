@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Indisoul Global for copper product inquiries, bulk orders, partnerships. Reach out to our team today.">
+<title>Contact Us - Indisoul Global</title><link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+<body>
+<header><div class="container nav"><div class="logo-box"><img src="img/logo.jpeg" alt="Indisoul Global Logo"><h1>INDISOUL</h1></div>
+<nav id="navMenu"><a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div></div></header>
+<section class="section dark contact-section">
+  <div class="container">
+
+    <div class="contact-header">
+      <h2>Contact Us</h2>
+      <p>
+        Get in touch with Indisoul Global for product inquiries,
+        bulk orders, partnerships, and support.
+      </p>
+    </div>
+<div class="contact-grid">
+      <div class="contact-card">
+        <h3>📍 Address</h3>
+        <p>
+          A-1 Soni Bhavan, Panchal Nagar<br>
+          Opp. Axis Bank,<br>
+          Nallasopara West - 401202
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h3>📞 Selling Management</h3>
+        <p>
+          Abhishek Gupta<br>
+          +91 99753 84462
+        </p>
+
+        <p class="top-space">
+          Jatin Waghela<br>
+          +91 83905 91553
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h3>🤝 Buyer Management</h3>
+        <p>
+          Rohan Waghela
+        </p>
+
+        <p class="top-space">
+          Kunal<br>
+          +91 9372570049
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h3>✉ Email</h3>
+        <p>top1@indisoulgl​oble.com</p>
+        <p style="margin-top: 15px;"><a href="https://a.co/d/07BsC6ys" target="_blank" class="social-link">🛍️ Visit Amazon Store</a></p>
+      </div>
+
+    </div>
+    <div style="margin-top: 60px; max-width: 700px; margin-left: auto; margin-right: auto;">
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <h3>Send us a Message</h3>
+        
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" placeholder="Bulk Order / Product Inquiry / Partnership" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Tell us more about your inquiry..." required></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit">Send Message</button>
+        </div>
+
+        <p class="form-note">💬 We'll get back to you within 24 hours</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer><p style="text-align: center; padding: 20px; color: #aaa;">© 2026 Indisoul Global. All Rights Reserved.</p></footer>
+<script src="mail.js"></script>
+<script>
+function toggleMenu(){document.getElementById("navMenu").classList.toggle("active")}
+</script>
+</body></html>

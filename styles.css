@@ -1,0 +1,249 @@
+
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#0b0f1a;color:#fff}
+.container{width:90%;max-width:1200px;margin:auto}
+header{background:rgba(0,0,0,0.9);position:sticky;top:0;z-index:1000}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:15px 0}
+.logo-box{display:flex;align-items:center;gap:10px}
+.logo-box img{width:40px}
+.logo-box h1{font-size:20px;color:#f5b642}
+nav{display:flex}
+nav a{color:#fff;margin-left:20px;text-decoration:none;transition:.3s}
+nav a:hover{color:#f5b642}
+.menu-toggle{display:none;font-size:24px;cursor:pointer}
+.hero{height:80vh;display:flex;align-items:center;text-align:center;background:linear-gradient(135deg,#0b0f1a,#1c2942)}
+.hero h2{font-size:42px}
+.hero p{margin:10px 0;color:#ccc}
+.btn{display:inline-block;padding:12px 25px;background:linear-gradient(45deg,#f5b642,#ff7a18);color:#000;border-radius:30px;text-decoration:none;font-weight:bold}
+.section{padding:60px 0}
+.section h2{text-align:center;margin-bottom:30px;font-size:2rem}
+.team-section{padding:80px 0;background:#111}
+.team-header{max-width:760px;margin:0 auto 60px;text-align:center}
+.team-header h2{margin-bottom:15px;font-size:2.2rem;color:#fff}
+.team-header p{color:#c4cad7;line-height:1.8;font-size:1.05rem}
+.team-group{margin-bottom:70px}
+.team-group:last-child{margin-bottom:0}
+.executive-group h3,
+.team-group h3{font-size:1.8rem;color:#f5b642;margin-bottom:30px;letter-spacing:.5px;position:relative;padding-bottom:15px}
+.team-group h3:after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:50px;height:3px;background:linear-gradient(90deg,#f5b642,#ff7a18);border-radius:2px}
+.team-grid,
+.department-grid,
+.specialized-grid{display:grid;gap:25px}
+.team-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.team-grid.compact{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px}
+.department-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.specialized-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.team-card{background:#1a2332;padding:25px 20px;border-radius:18px;text-align:center;box-shadow:0 10px 35px rgba(0,0,0,.4);transition:all .3s ease;border:1px solid rgba(245,182,66,.15)}
+.team-card:hover{transform:translateY(-6px);box-shadow:0 16px 50px rgba(245,182,66,.2);border-color:rgba(245,182,66,.35)}
+.team-card img{width:110px;height:110px;object-fit:cover;border-radius:50%;border:3px solid rgba(245,182,66,.4);margin:0 auto 16px;display:block;background:#1d2a47}
+.team-card h4{margin:0 0 8px;font-size:1.15rem;color:#fff;font-weight:600}
+.team-card h5{margin:0 0 8px;font-size:1.05rem;color:#fff;font-weight:600}
+.team-card p{margin:0;color:#a8b0c8;line-height:1.6;font-size:.95rem}
+.small-card{padding:20px 18px;background:#151d2b}
+.small-card img{width:90px;height:90px}
+.department-card{background:linear-gradient(135deg,#0f1626 0%,#151d2b 100%);padding:28px;border-radius:20px;border:1px solid rgba(245,182,66,.12);box-shadow:0 8px 25px rgba(0,0,0,.3)}
+.department-card h4{margin:0 0 22px;font-size:1.25rem;color:#f5b642;font-weight:600;letter-spacing:.3px}
+.department-card:hover{box-shadow:0 12px 35px rgba(245,182,66,.15);border-color:rgba(245,182,66,.25)}
+.specialized-card{background:linear-gradient(135deg,#0f1626 0%,#151d2b 100%);padding:28px;border-radius:20px;border:1px solid rgba(245,182,66,.12);box-shadow:0 8px 25px rgba(0,0,0,.3);transition:all .3s ease}
+.specialized-card h4{margin:0 0 18px;font-size:1.25rem;color:#f5b642;font-weight:600;letter-spacing:.3px}
+.specialized-card:hover{box-shadow:0 12px 35px rgba(245,182,66,.15);border-color:rgba(245,182,66,.25)}
+.team-purpose{margin:15px 0 0;padding-top:15px;border-top:1px solid rgba(245,182,66,.1);color:#b9bfd6;line-height:1.7;font-size:.95rem}
+.dark{background:#111}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#1a1f2e;padding:15px;border-radius:15px;text-align:center;transition:.3s}
+.card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+.card:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(255,122,24,0.3)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+footer{text-align:center;padding:20px;background:#000;color:#aaa}
+@media(max-width:768px){nav{position:absolute;top:70px;right:0;background:#000;flex-direction:column;width:200px;display:none}nav.active{display:flex}nav a{padding:15px;border-bottom:1px solid #222}.menu-toggle{display:block}.hero h2{font-size:28px}.team-section{padding:60px 0}.team-header h2{font-size:1.8rem}.team-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}.team-grid.compact{grid-template-columns:repeat(2,1fr)}.department-grid{grid-template-columns:1fr}.specialized-grid{grid-template-columns:1fr}}
+/* CONTACT PAGE IMPROVEMENTS */
+
+.contact-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-header h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  color: #bbb;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.contact-card {
+  background: #1a1f2e;
+  padding: 30px 25px;
+  border-radius: 18px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255,122,24,0.25);
+}
+
+.contact-card h3 {
+  color: #f5b642;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.contact-card p {
+  color: #ddd;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.social-link {
+  color: #f5b642;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgba(245, 182, 66, 0.4);
+  border-radius: 8px;
+  background: rgba(245, 182, 66, 0.1);
+}
+
+.social-link:hover {
+  color: #fff;
+  background: linear-gradient(45deg, #f5b642, #ff7a18);
+  border-color: #ff7a18;
+  box-shadow: 0 4px 15px rgba(255, 122, 24, 0.3);
+}
+
+.top-space {
+  margin-top: 20px !important;
+}
+
+/* FORM STYLES */
+.contact-form {
+  background: linear-gradient(135deg, #0f1626 0%, #151d2b 100%);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(245, 182, 66, 0.15);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: #f5b642;
+  letter-spacing: 0.5px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #f5b642;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(26, 31, 46, 0.8);
+  border: 2px solid rgba(245, 182, 66, 0.2);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #888;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f5b642;
+  background: rgba(26, 31, 46, 1);
+  box-shadow: 0 0 15px rgba(245, 182, 66, 0.3), inset 0 0 10px rgba(245, 182, 66, 0.05);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-submit {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.form-submit button {
+  padding: 14px 40px;
+  background: linear-gradient(45deg, #f5b642, #ff7a18);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 20px rgba(255, 122, 24, 0.3);
+}
+
+.form-submit button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 122, 24, 0.5);
+}
+
+.form-submit button:active {
+  transform: translateY(-1px);
+}
+
+.form-note {
+  text-align: center;
+  color: #a8b0c8;
+  margin-top: 25px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media(max-width:768px) {
+  .contact-form {
+    padding: 25px;
+  }
+  
+  .contact-form h3 {
+    font-size: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-submit button {
+    width: 100%;
+  }
+}
